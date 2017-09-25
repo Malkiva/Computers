@@ -10,17 +10,8 @@
 
     <?php
 
-		function connect()
-			{
-				$mysqli = new mysqli (
-					"localhost",
-					"malkivan",
-					"123",
-					"computers"
-				);		
-				return $mysqli;
-			}	
-
+		require_once 'function.php';
+		
 		function createChar($display="",$pro="",$ozy="",$oc="")
 			{
 				$mysqli = connect();
@@ -59,7 +50,7 @@
             <p>Процессор: <input type="text" name="pro" /></p>
             <p>ОЗУ: <input type="text" name="ozy" /></p>
             <p>ОС: <input type="text" name="oc" /></p>
-            <p><input type="submit" name="add-char" value="Добавить характеристики"><a href="http://localhost/computer.php">Назад</a></p>
+            <p><input type="submit" name="add-char" value="Добавить характеристики"><a href="/computer.php">Назад</a></p>
         </form>
 
 </body>
