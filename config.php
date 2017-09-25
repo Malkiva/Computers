@@ -10,16 +10,7 @@
 
     <?php
 
-function connect()
-			{
-				$mysqli = new mysqli (
-					"localhost",
-					"malkivan",
-					"123",
-					"computers"
-				);		
-				return $mysqli;
-			}	
+		require_once 'function.php';
 
 		function createCom($name="",$login="",$password="")
 			{
@@ -57,7 +48,7 @@ function connect()
             <p>Название: <input type="text" name="name" /></p>
             <p>Логин: <input type="text" name="login" /></p>
             <p>Пароль: <input type="password" name="password" /></p>
-            <p><input type="submit" name="add-user" value="Добавить компьютер"><a href="http://localhost/computer.php">Назад</a></p>
+            <p><input type="submit" name="add-user" value="Добавить компьютер"><a href="computer.php">Назад</a></p>
         </form>
 
 </body>
