@@ -11,16 +11,9 @@
 
 
     <?php
-		function connect()
-			{
-				$mysqli = new mysqli (
-					"localhost",
-					"malkivan",
-					"123",
-					"computers"
-				);		
-				return $mysqli;
-			}	
+
+		require_once 'function.php';
+
 		if (isset($_GET['delete'])) {
 			$id = abs((int)$_GET['delete']);
 
@@ -60,7 +53,7 @@
 					while ($com = $result->fetch_assoc());
 
 				echo "<h1><a href='computer2.php'>Добавить характеристики...</a></h1>";
-				echo "<a href='http://localhost/computer.php'>Назад</a>";
+				echo "<a href='/computer.php'>Назад</a>";
 
 			exit;
 		}
